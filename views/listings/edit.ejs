@@ -3,30 +3,30 @@
     <div class="col-8 offset-2 ">
         <br>
         <h5>Edit Your Listing</h5>
-<form method="POST"  action="/listing/<%= inddata._id %>?_method=PUT">
+<form method="POST"  action="/listing/<%= inddata._id %>?_method=PUT" class="needs-validation" novalidate>
     <div class="input-div"> <label for="title" class="form-lable">Title</label>
-        <input  name="title"  value="<%= inddata.title %>" class="form-control"/>
+        <input  name="title"  value="<%= inddata.title %>" class="form-control" required/>
     </div>
     
     <div class="input-div">
         <label for="description" class="form-lable">Desription</label>
-        <textarea name="description"  cols="15" rows="3"  class="form-control"><%= inddata.description %></textarea>
+        <textarea name="description"  cols="15" rows="3"  class="form-control" required><%= inddata.description %></textarea>
     </div>
           <div class="input-div">
             <label for="img" class="form-lable">Image URL</label>
-            <input  name="img"  class="form-control" value="<%= inddata.image %>"/>
+            <input  name="img"  class="form-control" value="<%= inddata.image %>" required/>
           </div>
           <div class="input-div">
             <label for="price" class="form-lable">Price</label>
-            <input  name="price" value="<%= inddata.price %>"  class="form-control"/>
+            <input  name="price" value="<%= inddata.price %>"  class="form-control" required/>
           </div>
           <div class="input-div">
             <label for="location" class="form-lable">Location</label>
-            <input  name="location"  value="<%= inddata.location %>"  class="form-control"/>
+            <input  name="location"  value="<%= inddata.location %>"  class="form-control" required/>
           </div>
           <div class="input-div">
             <label for="country" class="form-lable">Country</label>
-            <input  name="country" value="<%= inddata.country %>"  class="form-control"/>
+            <input  name="country" value="<%= inddata.country %>"  class="form-control" required/>
           </div>
           <br>
            <button class="btn btn-outline-danger">Edit</button>
@@ -36,3 +36,4 @@
 </div>
     
 </body>
+<script src="css/js/Script.js"></script>

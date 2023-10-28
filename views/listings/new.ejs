@@ -3,14 +3,14 @@
     <div class="row">
         <div class="col-8 offset-2 ">
             <br>
-    <form method="POST"  action="/listings">
+    <form method="POST"  action="/listings" class="needs-validation" novalidate>
         <div class="input-div"> <label for="title" class="form-lable">Title</label>
-            <input  name="title" placeholder="enter title"  class="form-control"/>
+            <input  name="title" placeholder="enter title"  class="form-control" required/>
         </div>
         
         <div class="input-div">
             <label for="description" class="form-lable">Desription</label>
-            <textarea name="description" placeholder="enter description" cols="15" rows="3"  class="form-control"></textarea>
+            <textarea name="description" placeholder="enter description" cols="15" rows="3"  class="form-control" required></textarea>
         </div>
               <div class="input-div">
                 <label for="img" class="form-lable">Image URL</label>
@@ -18,15 +18,15 @@
               </div>
               <div class="input-div">
                 <label for="price" class="form-lable">Price</label>
-                <input  name="price" placeholder="enter price"  class="form-control"/>
+                <input  name="price" placeholder="enter price"  class="form-control" required/>
               </div>
               <div class="input-div">
                 <label for="location" class="form-lable">Location</label>
-                <input  name="location" placeholder="enter location"  class="form-control"/>
+                <input  name="location" placeholder="enter location"  class="form-control" required/>
               </div>
               <div class="input-div">
                 <label for="country" class="form-lable">Country</label>
-                <input  name="country" placeholder="enter country"  class="form-control"/>
+                <input  name="country" placeholder="enter country"  class="form-control" required/>
               </div>
               <br>
                <button class="btn btn-outline-danger">add</button>

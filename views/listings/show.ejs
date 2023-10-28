@@ -2,14 +2,14 @@
 <body>
     <div class="row">
         <div class="col-8 offset-2">
-            <h3>Listing detail</h3>
+            <h3> <b><%= inddata.title %></b></h3>
             </div>
 
             <div class="card col-6 offset-2"  >
                 <img src="<%= inddata.image%>" class="card-img-top show-img" alt="listing-image">
                 <div class="card-body">
                   <p class="card-text">
-                    <b><%= inddata.title %></b><br>
+                   <br>
                     <%= inddata.description %>
                   
                     <br>&#8377;<%= inddata.price.toLocaleString("en-IN") %>
@@ -31,6 +31,18 @@
             
             <br>
             
+    </div><hr>
+    <div class="col-6 offset-2 mb-3 mt-3">
+        <h3>Leave a Review</h3>
+        <form action="/listings/<%= inddata._id %>/review" method="post">
+            <label for="rng">Rating</label>
+            <input type="range" id="rng" min="1" max="5" name="review[rating]"><br>
+            <label for="comment" class="form-lable mt-3">Comment</label><br>
+            <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control"></textarea><br>
+            <button class="btn btn-outline-danger">submit
+            </button>
+        </form>
     </div>
+
     
 </body>
